@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>VueJS Course</title>
     <link rel="stylesheet" type="text/css" href="main.css" />
-  </head>
-  <body>
-    <div id="app" v-cloak >
+</head>
+
+<body>
+    <div id="app" v-cloak>
         <p>{{ fullName() }}</p>
-        <p> <a v:href="url" target="_blank" rel="noopener noreferrer">Google</a></p>
-        
+        <p> <a :href="url" target="_blank" rel="noopener noreferrer">Google</a></p>
+
         <p v-html="raw_url"> </p>
+        <p> {{age}}</p>
+
         <hr>
+
         <label for="">firstName</label>
         <input type="text" name="" id="" v-model="firstName">
 
-        <label for="">lastName</label> 
+        <label for="">lastName</label>
         <input type="text" name="" id="" v-model="lastName">
+
+        <button type="button" @click="increment">Increment</button>
+        <button type="button" @click="age--">Decrement</button>
     </div>
 
     <!-- <div id="app2">
@@ -25,5 +33,6 @@
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="app.js"></script>
-  </body>
+</body>
+
 </html>
