@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>VueJS Course</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+  </head>
+  <body>
+    <div id="app" v-cloak >
+        <p>{{ fullName() }}</p>
+        <hr>
+        <label for="">firstName</label>
+        <input type="text" name="" id="" v-model="firstName">
+
+        <label for="">lastName</label> 
+        <input type="text" name="" id="" v-model="lastName">
+    </div>
+
+    <!-- <div id="app2">
+        {{ firstName }}
+        {{ lastName }}
+    </div> -->
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
