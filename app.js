@@ -16,8 +16,16 @@ const vm = Vue.createApp({
         fullName(){
             return `${this.firstName} ${this.lastName.toUpperCase()}`
         },
+
         increment(){
             this.age++
+        },
+
+        updateLastName(msg,event){
+        
+            console.log(msg)
+
+            this.lastName = event.target.value
         }
     }
 }).mount('#app')
