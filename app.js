@@ -14,9 +14,6 @@ const vm = Vue.createApp({
         }
     },
     methods: { 
-        fullName(){
-            return `${this.firstName} ${this.lastName.toUpperCase()} ${this.middleName}`
-        },
 
         increment(){
             this.age++
@@ -31,6 +28,22 @@ const vm = Vue.createApp({
 
         updateMiddleName(event){
             this.middleName = event.target.value
+        },
+    },
+    computed: {
+        
+        fullName(){
+            console.log('Fullname computed property was called !')
+
+            return `${this.firstName} ${this.lastName.toUpperCase()} ${this.middleName}`
+        },
+    },
+    watch: {
+        age(newVal, oldVal){
+            setTimeout(()=>{
+
+                this.age = 20
+            }, 3000)
         }
     }
 }).mount('#app')
